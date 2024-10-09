@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FirstAppJC</string>
+    <string name="send_mail_button">Send</string>
+    <string name="email_label">Email</string>
+    <string name="subject_label">Subject</string>
+    <string name="body_label">Body</string>
+    <string name="title">Send Mail using Mail Intent</string>
 </resources>

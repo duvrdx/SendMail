@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstAppJC</string>
+    <string name="send_mail_button">Enviar</string>
+    <string name="email_label">Email</string>
+    <string name="subject_label">Assunto</string>
+    <string name="body_label">Corpo</string>
+    <string name="title">Enviando Email usando Intent</string>
+</resources>
