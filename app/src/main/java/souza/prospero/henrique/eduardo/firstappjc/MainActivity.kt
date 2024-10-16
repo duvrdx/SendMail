@@ -156,16 +156,21 @@ fun SendButton(email: String, subject: String, body: String, context: Context) {
 }
 
 private fun sendEmail(email: String, subject: String, body: String, context: Context) {
+
+//  Construindo intenção para enviar email
     val sendMailIntent = Intent(Intent.ACTION_SENDTO).apply {
         data = Uri.parse("mailto:")
+//      Adiciona no "Hashmap" da intenção os campos extras
         putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
         putExtra(Intent.EXTRA_SUBJECT, subject)
         putExtra(Intent.EXTRA_TEXT, body)
     }
 
     try {
+//      Chama um "Chooser" para lidar com a intenção de enviar um e-mail
         context.startActivity(Intent.createChooser(sendMailIntent, "Send email to ${email}"))
     } catch (ex: ActivityNotFoundException) {
+//      Caso não encontre um aplicativo que satifaz a intenção, mostra um Toast
         Toast.makeText(context, "No email clients installed.", Toast.LENGTH_SHORT).show()
     }
 }
